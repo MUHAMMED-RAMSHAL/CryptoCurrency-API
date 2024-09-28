@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
     // Function to fetch data from CoinGecko API
     const fetchCryptoData = async () => {
         const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false';
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Function to update the table with fetched data
+    // Function to update  fetched data
     const updateTable = (data) => {
         const tbody = document.getElementById('PriceChange');
         tbody.innerHTML = ''; // Clear previous rows if any
@@ -55,4 +55,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch the data when the page loads
     fetchCryptoData();
-});
+
