@@ -1,0 +1,101 @@
+body{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+th{
+    background-color: darkgrey;
+    border: 2px solid black;
+    width: auto;
+    height: 40px;
+    align-items: center;
+  
+
+}
+
+/* Table rows */
+tbody tr {
+    border: 1px solid black;
+    width: auto;
+    height: 40px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+  
+}
+
+/* Table data cells */
+tbody td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    border-collapse: collapse;
+    border: 2px solid black;
+   
+    
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: #c7c6c6;
+}
+
+/* Styling for positive price changes */
+tbody tr td:last-child {
+    font-weight: bold;
+}
+
+.green-highlight {
+    background-color: #085a14; 
+    color: #155724;          
+}
+
+/* Positive change */
+.yellow-highlight {
+    background-color: #f8ed53; /* Light yellow background */
+    color: black;
+           
+}
+
+/* Negative change */
+.red-highlight {
+    background-color: #fe727d; 
+   
+}
+
+
+/* Small screen responsiveness */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        padding-left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tbody td:last-child::before {
+        content: '';
+    }
+}
